@@ -7,7 +7,7 @@ const server = http.createServer((req: http.IncomingMessage, res: http.ServerRes
     const parsedUrl = new URL(req.url || '', `http://${req.headers.host}`);
     const pathname = parsedUrl.pathname;
 
-    console.log(`\n[${new Date().toISOString()}] ${req.method} resuest to ${pathname}`);
+    console.log(`\n[${new Date().toISOString()}] ${req.method} request to ${pathname}`);
 
     //Default content-type for all responses
     res.setHeader('Content-Type', 'application/json');

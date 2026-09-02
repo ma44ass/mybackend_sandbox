@@ -9,7 +9,7 @@ const server = http.createServer((req : http.IncomingMessage, res: http.ServerRe
     console.log(`[REQUEST LINE] ${req.method} ${req.url} HTTP/${req.httpVersion}`);
     console.log('\n============');
 
-    //1. Inspect rew headers sent by the client
+    //1. Inspect raw headers sent by the client
     console.log('\n--- HEADERS ---');
     for(const [key,value] of Object.entries(req.headers)){
         console.log(`${key}: ${value}`);
